@@ -5,6 +5,7 @@ def calculate_or(df, groups, exposure, outcomes):
     
     for outcome in outcomes:
         ct = pd.crosstab(df_filtered[exposure], df_filtered[outcome])
+        ct = ct.reindex(index=groups)
         if ct.shape != (2, 2):
             continue
         
