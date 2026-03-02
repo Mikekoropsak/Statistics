@@ -1,3 +1,9 @@
+import pandas as pd 
+import numpy as np
+
+from scipy.stats import stats
+from scipy.stats.contingency import odds_ratio
+
 def calculate_or(df, groups, exposure, outcomes):
     tables = []
     results = []
